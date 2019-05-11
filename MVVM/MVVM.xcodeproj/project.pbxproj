@@ -24,7 +24,6 @@
 		4C80BEE02285A8F100873016 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80BEDF2285A8F100873016 /* Router.swift */; };
 		4C80BEE32285A98C00873016 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80BEE22285A98C00873016 /* MainViewModel.swift */; };
 		4C80BEE52285A9E400873016 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80BEE42285A9E400873016 /* NetworkManager.swift */; };
-		4C80BEEE2285D02400873016 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80BEED2285D02400873016 /* RoundButton.swift */; };
 		4C80BEF02285F10200873016 /* SunsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C80BEEF2285F10200873016 /* SunsetViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		4C80BEDF2285A8F100873016 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4C80BEE22285A98C00873016 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4C80BEE42285A9E400873016 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		4C80BEED2285D02400873016 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		4C80BEEF2285F10200873016 /* SunsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				4C4B7B912285F84C00A0A6A3 /* Storyboards */,
-				4C80BEEC2285D00800873016 /* View */,
 				4C80BEDE2285A8E500873016 /* Router */,
 				4C80BEDB2285A84F00873016 /* Constants */,
 				4C80BED52285A68D00873016 /* Managers */,
@@ -231,14 +228,6 @@
 				4C80BEDF2285A8F100873016 /* Router.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		4C80BEEC2285D00800873016 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4C80BEED2285D02400873016 /* RoundButton.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +369,6 @@
 				4C80BEE02285A8F100873016 /* Router.swift in Sources */,
 				4C80BE9E2285A56200873016 /* AppDelegate.swift in Sources */,
 				4C4B7B902285F37700A0A6A3 /* SunsetSunriseViewModel.swift in Sources */,
-				4C80BEEE2285D02400873016 /* RoundButton.swift in Sources */,
 				4C80BEA62285A56200873016 /* MVVM.xcdatamodeld in Sources */,
 				4C80BED92285A81300873016 /* Constatns.swift in Sources */,
 				4C80BEE32285A98C00873016 /* MainViewModel.swift in Sources */,
