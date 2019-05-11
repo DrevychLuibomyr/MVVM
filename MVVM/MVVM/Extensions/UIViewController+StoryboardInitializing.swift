@@ -10,13 +10,15 @@ import UIKit
 
 enum StoryboardId: String {
     case Main
-    case Weather
+    case Sunset
 }
 
 protocol StoryboardInitializing {}
 
+//MARK: UIViewController+StoryboardInitializing
 extension UIViewController: StoryboardInitializing {}
 
+//MARK: UIViewController+className
 extension UIViewController {
     
     static func className() -> String {
@@ -30,9 +32,9 @@ extension UIViewController {
         assert(vc != nil, "No initialViewcontroller in storyboard")
         return vc!
     }
-    
 }
 
+//StoryboardInitializing+instantiateFromStoryboardId
 extension StoryboardInitializing where Self: UIViewController {
     
     static func instantiateFromStoryboardId(_ storyboardId: StoryboardId) -> Self {

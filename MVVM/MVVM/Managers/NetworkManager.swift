@@ -88,6 +88,7 @@ final class NetworkManager {
     }
 }
 
+//MARK: Int+Second
 extension Int {
     public var seconds: TimeInterval  { return Double(self) }
 }
