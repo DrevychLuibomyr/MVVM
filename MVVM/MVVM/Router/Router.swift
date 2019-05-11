@@ -30,12 +30,12 @@ final class NavigationRouter {
         navigationController.viewControllers = [mainViewController]
     }
     
-    func showSunsetSunriseViewController(current: UIViewController, to next: UIViewController, with animation: Bool) {
+    func showSunsetSunriseViewController(current: UIViewController, with animation: Bool) {
         let sunsetSunriseViewController = SunsetViewController.instantiateFromStoryboardId(.Sunset)
         let networkManager = NetworkManager()
         let locationManager = LocationManager()
         sunsetSunriseViewController.viewModel = SunsetSunriseViewModel(network: networkManager, location: locationManager)
-        navigate(from: current, to: next, with: animation, with: .push)
+        navigate(from: current, to: sunsetSunriseViewController, with: animation, with: .push)
     }
     
     private func navigate(from: UIViewController, to: UIViewController, with animation: Bool, with transition: TypeTransition, handler: (()->())? = nil) {
