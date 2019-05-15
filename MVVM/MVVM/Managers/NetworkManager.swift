@@ -28,14 +28,14 @@ final class NetworkManager {
     
     private let session: URLSession
     
-    init(timeout: TimeInterval = 60.seconds) {
+    init(timeout: TimeInterval = 20.seconds) {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = timeout
         sessionConfig.timeoutIntervalForResource = timeout
         session = URLSession(configuration: sessionConfig)
     }
     
-    public func getSunsetSunriseData(latitude: CLLocationDegrees, longitute: CLLocationDegrees,complitionHandler: @escaping (Result) -> Void, delay: TimeInterval = 5.seconds) {
+    public func getSunsetSunriseData(latitude: CLLocationDegrees, longitute: CLLocationDegrees,complitionHandler: @escaping (Result) -> Void) {
         guard let url = getSunsetSunriseURL(long: "\(longitute)", lat: "\(latitude)") else {
             complitionHandler(.failude(error: .wrongURL))
             return
@@ -63,10 +63,7 @@ final class NetworkManager {
                 complitionHandler(.failude(error: .requestFailed(statusCode: response.statusCode)))
             }
         }
-         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) {
-            task.resume()
-        }
-        
+        task.resume()
     }
     
     //MARK: Private

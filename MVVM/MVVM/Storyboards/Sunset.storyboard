@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,56 @@
             <objects>
                 <viewController restorationIdentifier="SunsetViewController" storyboardIdentifier="SunsetViewController" id="RL7-qf-sQv" customClass="SunsetViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyA-BN-Dk1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-OD-wKF">
+                                <rect key="frame" x="40" y="174" width="129" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="R47-u7-ErK"/>
+                                    <constraint firstAttribute="height" constant="42" id="Y2f-nc-9LT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smm-qw-y86">
+                                <rect key="frame" x="40" y="247" width="129" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-yE-Qzb">
+                                <rect key="frame" x="40" y="319" width="129" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="smm-qw-y86" firstAttribute="height" secondItem="jjt-OD-wKF" secondAttribute="height" id="OOz-bx-J5k"/>
+                            <constraint firstItem="smm-qw-y86" firstAttribute="width" secondItem="jjt-OD-wKF" secondAttribute="width" id="QhB-GY-T9T"/>
+                            <constraint firstItem="jjt-OD-wKF" firstAttribute="leading" secondItem="Vlm-UA-qZE" secondAttribute="leading" constant="40" id="S57-u2-kHO"/>
+                            <constraint firstItem="rDu-yE-Qzb" firstAttribute="top" secondItem="smm-qw-y86" secondAttribute="bottom" constant="30" id="SU8-RT-Lhp"/>
+                            <constraint firstItem="rDu-yE-Qzb" firstAttribute="height" secondItem="smm-qw-y86" secondAttribute="height" id="dCh-im-fDd"/>
+                            <constraint firstItem="rDu-yE-Qzb" firstAttribute="width" secondItem="smm-qw-y86" secondAttribute="width" id="k7p-ID-1rt"/>
+                            <constraint firstItem="smm-qw-y86" firstAttribute="top" secondItem="jjt-OD-wKF" secondAttribute="bottom" constant="31" id="mjw-Ax-gFh"/>
+                            <constraint firstItem="rDu-yE-Qzb" firstAttribute="leading" secondItem="Vlm-UA-qZE" secondAttribute="leading" constant="40" id="oMi-Q2-Zcw"/>
+                            <constraint firstItem="smm-qw-y86" firstAttribute="leading" secondItem="Vlm-UA-qZE" secondAttribute="leading" constant="40" id="s0W-oY-da4"/>
+                            <constraint firstItem="jjt-OD-wKF" firstAttribute="top" secondItem="Vlm-UA-qZE" secondAttribute="top" constant="130" id="uTt-Jb-yea"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vlm-UA-qZE"/>
                     </view>
+                    <connections>
+                        <outlet property="sunrise" destination="jjt-OD-wKF" id="Ios-DQ-YM4"/>
+                        <outlet property="sunset" destination="smm-qw-y86" id="lKR-44-C9R"/>
+                        <outlet property="twilligtBegin" destination="rDu-yE-Qzb" id="DGy-RV-ADF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyQ-Fp-jGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="-177"/>
+            <point key="canvasLocation" x="14.492753623188406" y="-177.45535714285714"/>
         </scene>
     </scenes>
 </document>

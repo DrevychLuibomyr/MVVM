@@ -20,11 +20,15 @@ final class SunsetSunriseViewModel {
         self.networkManager = network
     }
     
-    func getSunsetSunriseData(vc:UIViewController,complitionHandler: @escaping (Result) -> Void, delay: TimeInterval) {
+    func permissionForLocation() {
+        locationManager.permissionForLocation()
+    }
+    
+    func getSunsetSunriseData(vc:UIViewController,complitionHandler: @escaping (Result) -> Void) {
         locationManager.getCurrentLocation { [weak self] (result) in
             switch result {
             case .success(let lattitude, let longitute):
-                self?.networkManager.getSunsetSunriseData(latitude: lattitude, longitute: longitute, complitionHandler: complitionHandler, delay: delay)
+                self?.networkManager.getSunsetSunriseData(latitude: lattitude, longitute: longitute, complitionHandler: complitionHandler)
             case .faild( _):
                 self?.showAlertError(on: vc, buttonTitle: Constants.buttonAlertTitle, title: Constants.alertControllerTitle, message: Constants.alertControllerMessage, buttonAction: {})
             }
