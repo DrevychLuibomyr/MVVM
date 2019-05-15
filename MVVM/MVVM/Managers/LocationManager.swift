@@ -23,7 +23,6 @@ enum PermissionState: String {
 
 typealias LocationResultHandler = (LocationResult) -> ()
 
-
 final class LocationManager: NSObject {
     
     private let locationManager = CLLocationManager()
@@ -51,6 +50,11 @@ final class LocationManager: NSObject {
             locationManager.startUpdatingLocation()
             print(PermissionState.authorized.rawValue)
         }
+    }
+    
+   public func getCurrentLocation(completion: @escaping LocationResultHandler) {
+        locationHandlers.append(completion)
+        locationManager.requestLocation()
     }
     
 }

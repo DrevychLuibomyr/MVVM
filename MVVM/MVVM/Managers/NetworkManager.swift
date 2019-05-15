@@ -35,7 +35,7 @@ final class NetworkManager {
         session = URLSession(configuration: sessionConfig)
     }
     
-    public func getSunsetSunriseData(latitude: CLLocationDegrees, longitute: CLLocationDegrees,complitionHandler: @escaping (Result) -> Void, delay: TimeInterval?) {
+    public func getSunsetSunriseData(latitude: CLLocationDegrees, longitute: CLLocationDegrees,complitionHandler: @escaping (Result) -> Void, delay: TimeInterval = 5.seconds) {
         guard let url = getSunsetSunriseURL(long: "\(longitute)", lat: "\(latitude)") else {
             complitionHandler(.failude(error: .wrongURL))
             return
@@ -63,11 +63,7 @@ final class NetworkManager {
                 complitionHandler(.failude(error: .requestFailed(statusCode: response.statusCode)))
             }
         }
-        guard let delay = delay else {
-            task.resume()
-            return
-        }
-        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) {
+         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + delay) {
             task.resume()
         }
         
